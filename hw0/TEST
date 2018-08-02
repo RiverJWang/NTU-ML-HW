@@ -1,0 +1,29 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# -*- coding: utf-8 -*-\n",
+    " \n",
+    "from PIL import Image\n",
+    " \n",
+    "im = Image.open(\"westbrook.jpg\")\n",
+    "pix = im.load()\n",
+    "# 获得图像尺寸:\n",
+    "w, h = im.size\n",
+    "newim = Image.new(\"RGB\",(w,h))\n",
+    "for i in range(w):\n",
+    "    for j in range(h):\n",
+    "        r, g, b = pix[i,j]# pix[i,j]为tuple\n",
+    "        newim.putpixel((i,j),(r//2,g//2,b//2))\n",
+    "newim.save('Q2.jpg', 'jpeg')\n"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 0
+}

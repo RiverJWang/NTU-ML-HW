@@ -23,5 +23,7 @@ for i in set(list_words):
 
 set_words = set(list_words)
 lists = list(set_words)
-for i in range(0, set_words.__len__(), 1):
-    print(lists[i], i, counter[i])
+
+with open('Q1.txt', 'w') as w:
+    for i in range(0, set_words.__len__(), 1):
+        w.write (str(lists[i]) + " " + str(i) + " " + str(counter[i]) + "\n")
