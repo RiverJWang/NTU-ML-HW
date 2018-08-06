@@ -3,7 +3,7 @@ import numpy as np
 
 # method 1: only use pm2.5 feature
 # read training data as n-array
-path_file = r"C:\Users\40664\Desktop\NTU-EXP-CODE-PYTHON\NTU-ML-HW\hw1\train.csv"
+path_file = 'train.csv'
 # read file as data-frame.
 # Using 'rb' reading method or the best way--gbk, because the file encoding is ANSI
 df = pd.read_csv(path_file, encoding='gbk')
